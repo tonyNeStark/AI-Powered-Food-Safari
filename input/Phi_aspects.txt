@@ -1,0 +1,17 @@
+1. ASPECT: "Food Quality" Category: Explicit
+2. ASPECT: "Dietary Accommodation" Category: Implicit
+3. ASPECT: "Service" Category: Explicit
+4. ASPECT: "Location for Pick-up" Category: Explicit
+5. ASPECT: "Affordability" Category: Explicit
+6. ASPECT: "Diversity of Menu Options" Category: Explicit
+7. ASPECT: "Beverage Quality" Category: Explicit
+8. ASPECT: "Cleanliness" Category: Implicit
+9. ASPECT: "Atmosphere" Category: Explicit
+10. ASPECT: "Waiting Time/Service Speed" Category: Explicit
+11. ASPECT: "Staff Courtesy" Category: Explicit
+12. ASPECT: "Family Friendliness" Category: Implicit
+13. ASPECT: "Food Portion Size" Category: Explicit
+14. ASPECT: "Taste Preferences" Category: Implicit
+15. ASPECT: "Restaurant Variety" Category: Implicit
+16. ASPECT: "Drink Options" Category: Implicit
+17. ASPECT: "Cultural Attractions" Category: Implicit

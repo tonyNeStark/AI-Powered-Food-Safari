@@ -1,0 +1,18 @@
+# TASK OVERVIEW
+Consider yourself as an expert on Natural Language Processing related issues. 
+
+# INPUT
+  - REVIEWS_FILE: {reviews_file}
+  - INPUT Format file: < > <TAB> < >  
+  - INPUT LANGUAGE: Input text is in one of the langauges or the mixer of this [English, Estonian, Russian] 
+
+# DESIRED OUTPUT FORMAT
+ 1. ASPECT: "<aspect-name1>" Category: [implicit or explicit]
+ 2. ASPECT: "<aspect-name2>" Category: [implicit or explicit]
+ so on ....
+
+# INSTRUCTIONS
+ Taking into account the task overview and given reviews (i.e., REVIEWS_FILE), do the following steps:
+ 1. Analyse and identify the important factors that are considered by users about a restaurant.
+ 2. Propose crutial explicit as well as implicit aspects for finding the best restaurants.
+ 3. Generate output strictly based on the DESIRED OUTPUT FORMAT.

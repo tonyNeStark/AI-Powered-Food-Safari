@@ -1,0 +1,98 @@
+R1  Fusion Kebab
+R2	Kõverkiosk
+R3	Hesburger Anne
+R4	BabyBack Ribs & BBQ, Tasku
+R5	Da Vinci Pasta & Pizza
+R6	Ruunipizza ja Pannkoogikohvik
+R7	Vapiano Tartu
+R8	Hesburger Raekoja plats
+R9	Trikster Tihane
+R10	Restoran Aparaat
+R11 Fasters Eesti OÜ
+R12	Aardla Pizzakeskus
+R13	Kohvik Vaksali
+R14	Yellow Chilli restoran
+R15	Veg Machine Tartu
+R16	Ülikooli Kohvik / DRINKGELD
+R17	Pahad Poisid
+R18	MyItaly Toidustuudio
+R19	Ränduri pub
+R20	Restoran Spargel
+R21	CHI Restoran & Take Away
+R22	Yakuza Sushi Bar
+R23	Kohvik Nobel
+R24	Tartu Lõuna Pizzakiosk
+R25	Cayenne Chilli
+R26	Restoran Red Chilli
+R27	Antonius Hotel
+R28	Tokyo sushibaar
+R29	KEBAB STOP
+R30	Opera Pizza
+R31	HAS KEBAB
+R32	Pappa Pizza
+R33	Kohtu kohvik OÜ
+R34	Ihamaru Pizza & Käbliku Brewery Taproom
+R35	Chaplin pubi
+R36	KEBAB CORNER
+R37	Tokumaru Tartu Kaubamaja
+R38	Sheriff Saloon
+R39	Caffeine EE
+R40	Gustav Gastro Cafe
+R41	ULA baar
+R42	Institute of Computer Science of University of Tartu
+R43	Pepe's Bistro & Social Club
+R44	Barlova
+R45	The Irish Embassy Pub Tartu
+R46	Truffe
+R47	Pubi RP 9
+R48	Kohvik Armastus
+R49	Mandala Restoran
+R50	KEBAB STOP TURU
+R51	WOK STOP
+R52	Cafe-restaurant Werner
+R53	Restoran 2Pipart
+R54	Pompei
+R55	Chez Andre
+R56	NOKK
+R57	Restoran Hõlm
+R58	Metsik Pizza
+R59	O'Learys Eeden
+R60	Gunpowder Cellar of Tartu
+R61	Tartu Aleksander
+R62	Krempel
+R63	JOYCE
+R64	Hansa Tall & Hansa Hoov
+R65	Green Chilli Restoran
+R66	Antonius Restaurant
+R67	Sirius Kiirtoit ja Pitsakohvik
+R68	Vilde Ja Vine
+R69	Pizza La Mimosa
+R70	Taverna Pizzeria
+R71	La Dolce Vita
+R72	Ginger Grill Restaurant
+R73	Restaurant München - Weihenstephaner Wirtshaus
+R74	Kolm Tilli
+R75	Crepp
+R76	Humal BISTRO
+R77	Tartu Grill OÜ
+R78	Indochina Restoran Tartu
+R79	Restoran Fii
+R80	Shawarma house
+R81	Eesti Rahva Muuseumi restoran Pööripäev
+R82	PizzaMinisteerium OÜ
+R83	Antoniuse Õu
+R84	Äpu Burger
+R85	Eesti Pubi Ruuni
+R86	Restaurant Balkan
+R87	TAIKO SUSHI
+R88	Kebab Pizza OÜ
+R89	TOKO resto Tartus
+R90	Olaf grill resto
+R91	The Grill
+R92	Polobox
+R93	Smile Restoran
+R94	Reval Café Riia mnt
+R95	Kohvipaus Tartu
+R96	Poké Bowl Tartu Kvartal
+R97	Sangari Söökla
+R98	Tartu Uulits Tänavagurmee

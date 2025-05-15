@@ -1,0 +1,111 @@
+# TASK OVERVIEW
+
+You are an NLP expert tasked with evaluating and ranking restaurants based on customer reviews, metadata, and user preferences. Your goal is to generate a ranked list of the best restaurants that align with the user’s promt. The ranking considers both sentiment from reviews and key metadata factors. Go step-by-step.
+
+# INPUTS
+
+1. ASPECTS_FILE: {aspects_file}
+   - Format:
+     ASPECT: "<aspect-name>" Category: [explicit or implicit]
+   - Example:
+     ASPECT: "Food Quality" Category: explicit
+   - Purpose:
+     Lists the restaurant aspects (e.g., food, service, pricing) to be evaluated.
+
+2. USER_LOCATION: {user_location}
+   - Description:
+     User’s location provided as latitude and longitude coordinates.
+   - Purpose:
+     Used for proximity-based calculations during ranking.
+
+3. REVIEWS_FILE: {reviews_file}
+   - Format:
+     <review_id> <TAB> <review_text>
+   - Description:
+     Each line contains a review ID and its text. Reviews may be in English, Estonian, Russian, or a mix of these languages.
+   - Sentiment Analysis:
+     For each review, analyze sentiment for every aspect from the ASPECTS_FILE. Determine sentiment (positive, neutral, negative) and calculate a score on a scale from 0.1 to 1.0.
+
+4. USER_PROMPT: {user_prompt}
+   - Details:
+     A natural language query specifying user preferences or requests (e.g., “restaurants with outdoor seating” or “restaurants near me with vegetarian options”).
+
+5. RESTAURANT_METADATA_FILE: {restaurant_metadata_file}
+   - Format:
+     <restaurant_name> <TAB> <totalScore> <TAB> <location_lat> <TAB> <location_lng> <TAB> <weekday_text> <TAB> <price_level> <TAB> <rating> <TAB> <takeout> <TAB> <user_ratings_total>
+   - Example:
+     Pasta Palace <TAB> 4.7 <TAB> 40.7128 <TAB> -74.0060 <TAB> ['Mon-Sun: 11 AM - 10 PM'] <TAB> 3 <TAB> 4.5 <TAB> True <TAB> 120
+   - Purpose:
+     Provides detailed metadata such as location, operating hours, price level, ratings, takeout options, and total user ratings.
+
+6. RESTAURANT_MAPPING_FILE: {restaurant_mapping_file}
+   - Format:
+     <short_name> <TAB> <Full Name>
+   - Example:   
+     R1	Fusion Kebab
+     R2	Kõverkiosk
+    
+
+# DESIRED OUTPUT FORMAT
+
+Produce a ranked list of the Top 5 Restaurants. Each entry should include:
+- Restaurant Name (Full Name, as mapped from RESTAURANT_MAPPING_FILE, do not include short_name)
+- Location: <location>
+- Rating: <rating>
+- Reason it was chosen: A brief explanation detailing why the restaurant was selected based on the criteria and the ranking formula.
+
+# RANKING FORMULA
+
+Calculate the composite score for each restaurant as follows:
+   Composite Score = w1 * (AverageReviewsScore) + w2 * (RestaurantMetadataScore)
+
+- Default Weights:
+  - w1 = 75% (Reviews and aspect sentiment analysis)
+  - w2 = 25% (Restaurant metadata)
+
+# DETAILED INSTRUCTIONS
+
+1. Parse the REVIEWS_FILE:
+   - Read each review.
+   - Skip reviews that are empty or contain invalid data.
+
+2. Sentiment Analysis:
+   - For each review, identify sentiments for all aspects defined in the ASPECTS_FILE.
+   - Evaluate the sentiment polarity (positive, neutral, negative) for each aspect.
+   - Convert the sentiment into a numerical score (0.1 to 1.0).
+   - Based on the user prompt, assign specific weights to each aspect (e.g., food quality, service) if indicated by the user’s preferences. In total all aspects should have value weight value 1.
+   - Compute the AverageReviewsScore for each restaurant by averaging the sentiment scores multiplied by weights across all relevant reviews.  
+
+3. Calculate RestaurantMetadataScore:
+   - Proximity:
+     Normalize the distance between the user’s location and the restaurant on a scale of 0 to 10 (closer locations receive a higher score).
+     Adjust the weight for proximity if the prompt emphasizes “near me.”
+   - Availability:
+     Verify that the restaurant is open at the user’s specified time (e.g., Sunday evening). Exclude restaurants that are closed.
+   - Takeout/Delivery:
+     Increase the score for restaurants offering takeout/delivery if the user requests these options.
+   - Restaurant Type:
+     Consider user-specified preferences (e.g., family-friendly, fast food).
+   - User Ratings:
+     Factor in both the overall rating (1 to 5 stars) and the total number of reviews.
+   - Accessibility:
+     Give a higher score to restaurants that are wheelchair-accessible if this is mentioned in the prompt or metadata.
+   - Normalize and combine these elements into the final RestaurantMetadataScore.
+
+4. Composite Score & Ranking:
+   - For each restaurant, compute the Composite Score using the provided formula.
+   - Rank restaurants in descending order based on the Composite Score.
+
+5. Generate Output:
+   - Format the top 5 ranked restaurants in the desired output format.
+   - Include a brief explanation for each restaurant, referencing the key factors (e.g., sentiment analysis, proximity, availability) that led to its ranking.
+
+# ADDITIONAL CONSIDERATIONS
+
+- Multilingual Reviews:
+  Ensure that sentiment analysis correctly handles reviews in English, Estonian, and Russian.
+- User Prompt Adjustments:
+  Modify weights or filters (such as prioritizing proximity) if explicitly mentioned in the user prompt.
+- Exclusions:
+  - Do not consider reviews that are empty or invalid.
+  - Exclude restaurants that are closed at the time specified by the user.

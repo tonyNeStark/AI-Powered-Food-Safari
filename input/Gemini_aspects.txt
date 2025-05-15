@@ -1,0 +1,12 @@
+1. ASPECT: "Food Quality" Category: explicit
+2. ASPECT: "Service Quality" Category: explicit
+3. ASPECT: "Price" Category: explicit
+4. ASPECT: "Service Speed" Category: explicit
+5. ASPECT: "Ambience" Category: explicit
+6. ASPECT: "Portion Size" Category: explicit
+7. ASPECT: "Hygiene" Category: explicit
+8. ASPECT: "Restaurant Type/Cuisine" Category: implicit
+9. ASPECT: "Menu Variety" Category: implicit
+10. ASPECT: "Family-Friendliness" Category: implicit
+11. ASPECT: "Location" Category: explicit
+12. ASPECT: "Overall Experience" Category: implicit

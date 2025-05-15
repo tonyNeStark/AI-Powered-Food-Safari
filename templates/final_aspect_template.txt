@@ -1,0 +1,25 @@
+# TASK OVERVIEW
+Consider yourself as an expert on Natural Language Processing related issues. 
+
+# INPUT
+- PROPOSALS_FILE1: {proposals_file1}
+- PROPOSALS_FILE2: {proposals_file2}
+- PROPOSALS_FILE2: {proposals_file3}
+- INPUT FORMAT file: 
+    ASPECT: "<aspect-name1>" Category: [explicit or implicit]
+
+# DESIRED OUTPUT FORMAT
+The final consolidated aspects should strictly follow this format:
+
+1. ASPECT: "<aspect-name1>" Category: [implicit or explicit]
+2. ASPECT: "<aspect-name2>" Category: [implicit or explicit]
+so on ....
+
+# INSTRUCTIONS
+1. Analyze all proposed aspects from different LLMs in PROPOSALS_FILE1, PROPOSALS_FILE2, PROPOSALS_FILE3.
+2. Identify common aspects across models and merge them into a unified list.
+3. Remove duplicates: Retain only one representative term for aspects with similar meanings.
+4. Refine vague aspects: Ensure that each aspect is clear, precise, and useful for restaurant analysis.
+5. Eliminate irrelevant or overly specific aspects that do not generalize well across restaurants.
+6. Classify aspects as explicit or implicit based on their nature.
+7. Do not include explanations or justifications—return only the final list in the DESIRED OUTPUT FORMAT.

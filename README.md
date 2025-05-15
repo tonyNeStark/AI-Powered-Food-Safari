@@ -10,6 +10,7 @@ Analyzes customer reviews (English, Estonian, Russian) to extract sentiment for 
 Dynamically weights aspects based on the user’s input  
 Scores each restaurant using both review sentiment and metadata (location, rating, takeout options, etc.)  
 Produces a ranked Top 5 list with explanations  
+  
 📂 Input Files  
 
 ASPECTS_FILE: Lists all aspects to evaluate (e.g., Food Quality, Ambience)  

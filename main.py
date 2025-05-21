@@ -5,7 +5,7 @@ from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 
 # Constants for API access
-OPENROUTER_API_KEY = ""
+OPENROUTER_API_KEY = "" #add openRouter API key here
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
 
 # ========== LLM Setup ==========
@@ -44,7 +44,7 @@ def create_prompt_template(template_content):
     return PromptTemplate(template=template_content)
 
 
-def process_final_template(input_file, metadata_file, review_file, mapping_file, output_file, chain):
+def process_final_template(input_file, metadata_file, review_file, mapping_file, chain):
     """
     Processes the final template with all input files and saves the result.
     """
@@ -52,13 +52,13 @@ def process_final_template(input_file, metadata_file, review_file, mapping_file,
         print("Error: One or more input files do not exist.")
         return
 
-    print(f"Running final template processing for: {input_file}")
+    print(f"Running final template processing for")
 
     input_data = {
         'aspects_file': read_file(input_file),
         'user_location': "58.377861, 26.728766",  # Hardcoded location input
         'reviews_file': read_file(review_file),
-        'user_prompt': "Find the best Italian restaurant near me",  # Static user query
+        'user_prompt': "Find the best Italian restaurant near me",  # Try to make your own prompt
         'restaurant_metadata_file': read_file(metadata_file),
         'restaurant_mapping_file': read_file(mapping_file)
     }
@@ -66,8 +66,6 @@ def process_final_template(input_file, metadata_file, review_file, mapping_file,
     output = chain.invoke(input_data)
 
     print(output)
-    save_output(output, output_file)
-    print(f"Output saved to: {output_file}")
 
 # ========== Main Runner ==========
 
@@ -84,14 +82,13 @@ def main():
     chain = prompt | llm | StrOutputParser()
 
     # Step 4: Define file paths
-    aspects_file = "./output/aspects.txt"
+    aspects_file = "./input/aspects.txt"
     metadata_file = "./input/cleaned_dataset.txt"
     reviews_file = "./input/Reviews.txt"
     mapping_file = "./input/short_name.txt"
-    output_file = "./output/top5.txt"
 
     # Step 5: Execute final processing
-    process_final_template(aspects_file, metadata_file, reviews_file, mapping_file, output_file, chain)
+    process_final_template(aspects_file, metadata_file, reviews_file, mapping_file, chain)
 
 # Run main
 if __name__ == "__main__":

@@ -1,0 +1,34 @@
+Aspect: "Food Quality" Category: explicit
+Aspect: "Service Quality" Category: explicit
+Aspect: "Price" Category: explicit
+Aspect: "Service Speed" Category: explicit
+Aspect: "Ambience" Category: explicit
+Aspect: "Portion Size" Category: explicit
+Aspect: "Hygiene" Category: explicit
+Aspect: "Location" Category: explicit
+Aspect: "Menu Variety" Category: explicit
+Aspect: "Beverage Quality" Category: explicit
+Aspect: "Reservation Availability" Category: explicit
+Aspect: "Payment Options" Category: explicit
+Aspect: "Wait Time" Category: explicit
+Aspect: "Food Presentation" Category: explicit
+Aspect: "Parking Availability" Category: explicit
+Aspect: "Noise Level" Category: explicit
+Aspect: "Special Offers & Discounts" Category: explicit
+Aspect: "Pet-Friendliness" Category: explicit
+Aspect: "Wi-Fi Availability" Category: explicit
+Aspect: "Accessibility Features" Category: explicit
+Aspect: "Family-Friendliness" Category: implicit
+Aspect: "Dietary Accommodation" Category: implicit
+Aspect: "Cleanliness" Category: implicit
+Aspect: "Taste Preferences" Category: implicit
+Aspect: "Overall Experience" Category: implicit
+Aspect: "Seasonal Menu" Category: implicit
+Aspect: "Social Media Popularity" Category: implicit
+Aspect: "Customizable Orders" Category: implicit
+Aspect: "Local Authenticity" Category: implicit
+Aspect: "Late-Night Dining Suitability" Category: implicit
+Aspect: "Event Hosting Suitability" Category: implicit
+Aspect: "Solo-Dining Friendliness" Category: implicit
+Aspect: "Romantic Ambiance" Category: implicit
+Aspect: "Business-Friendly Atmosphere" Category: implicit

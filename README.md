@@ -19,3 +19,11 @@ RESTAURANT_METADATA_FILE: Info like location, rating, price level
 RESTAURANT_MAPPING_FILE: Maps short names to full restaurant names  
 USER_LOCATION: Coordinates to assess proximity  
 USER_PROMPT: Natural language query from the user  
+
+How to start?
+1. git clone
+2. pip install langchain and pip install langchain-core
+3. Go to [openrouter.ai](https://openrouter.ai), sign in and create an API key
+4. Paste API key to the main.py line 8
+5. Change user_prompt if you want line 61
+
